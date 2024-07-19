@@ -53,7 +53,7 @@ export default function Home() {
                 type='video/mp4'
               />
             </video>
-            <h1 className='text-slate-900/99 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-6xl font-bold text-foreground sm:text-9xl'>
+            <h1 className={cn('text-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-6xl text-foreground sm:text-9xl font-bold', introOut && s.show)}>
               Sam Bate
             </h1>
           </div>
