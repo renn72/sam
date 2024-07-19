@@ -30,7 +30,7 @@ export default function Home() {
             />
           </video>
           <h1
-            className='text-center text-foreground text-9xl font-bold text-slate-900/99 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute'
+            className='text-center text-foreground text-6xl sm:text-9xl font-bold text-slate-900/99 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute'
         >
           Sam Bate
         </h1>
