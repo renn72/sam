@@ -1,12 +1,16 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ReactLenis, useLenis } from 'lenis/react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import s from './home.module.scss'
 import { useRect } from '@darkroom.engineering/hamo'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+
+gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(ScrollTrigger)
 
 const HeroTextIn = ({
   children,
@@ -27,6 +31,20 @@ const HeroTextIn = ({
 export default function Home() {
   const [introOut, setIntroOut] = useState(false)
   const [whyRectRef, whyRect] = useRect()
+
+  const container = useRef<HTMLDivElement>(null)
+
+  useGSAP(
+    () => {
+      ScrollTrigger.create({
+        trigger: container.current,
+        pin: '.pin-me',
+        start: 'center center',
+        end: '=+500',
+      })
+    },
+    { scope: container },
+  )
 
   useEffect(() => {
     setTimeout(() => {
@@ -96,6 +114,57 @@ export default function Home() {
             <div className={cn(s.text, '')}></div>
           </div>
         </section>
+        <section ref={container}>
+          <div className='flex h-screen flex-col items-center justify-center bg-white'>
+            <Image
+              src='/assets/beer_nuts.webp'
+              alt=''
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className='flex h-screen w-full items-center justify-center bg-red-500'>
+            <Image
+              src='/assets/vodka.png'
+              alt=''
+              width={400}
+              height={400}
+            />
+          </div>
+        </section>
+        <section>
+          <div className='grid h-screen grid-cols-12 justify-items-center gap-0'>
+            <div className='col-span-6 w-full place-items-center bg-white'>
+              <h2 className='pin-me'>
+                <Image
+                  src='/assets/beer_nuts.webp'
+                  alt=''
+                  width={400}
+                  height={400}
+                  className='mx-auto'
+                />
+              </h2>
+            </div>
+            <aside className=''>
+              <div className=''>
+                <p className=''>
+                  Beer nuts are a popular snack known for their irresistible
+                  combination of crunch and flavor, making them an ideal
+                  companion to a cold beverage. Typically made from premium
+                  peanuts, these beer nuts are roasted to perfection and lightly
+                  coated with a sweet and savory glaze, enhancing their natural
+                  taste. The unique blend of seasoning often includes hints of
+                  caramelized sugar and salt, striking a perfect balance that
+                  appeals to a wide range of palates. Whether enjoyed at a
+                  casual backyard barbecue or a lively pub, Australian beer nuts
+                  offer a delightful snacking experience that complements the
+                  laid-back, convivial spirit of Australian social gatherings
+                </p>
+              </div>
+            </aside>
+          </div>
+        </section>
+        <br />
         <section
           className={s.why}
           data-lenis-scroll-snap-align='start'
