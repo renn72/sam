@@ -30,11 +30,7 @@ const HeroTextIn = ({
   )
 }
 
-const Hero = ({
-  triggerRef,
-}: {
-  triggerRef: React.RefObject<HTMLDivElement>
-}) => {
+const Hero = () => {
   const [introOut, setIntroOut] = useState(false)
   const samRef = useRef(null)
   const bateRef = useRef(null)
@@ -56,8 +52,8 @@ const Hero = ({
         ease: 'power1.outIn',
         onComplete: () => {
           gsap.to(samRef.current, {
-            y: '-20%',
-            duration: 1,
+            y: '-10%',
+            duration: 0.5,
             ease: 'power1.inOut',
           })
         },
@@ -78,8 +74,8 @@ const Hero = ({
         ease: 'power1.outIn',
         onComplete: () => {
           gsap.to(bateRef.current, {
-            y: '20%',
-            duration: 1,
+            y: '10%',
+            duration: 0.5,
             ease: 'power1.inOut',
           })
         },
@@ -89,7 +85,7 @@ const Hero = ({
       scrollTrigger: {
         scrub: 1,
       },
-      y: 1,
+      y: () => -ScrollTrigger.maxScroll(window) * 1,
     })
   })
 
@@ -118,7 +114,10 @@ const Hero = ({
         <div className='absolute left-0 top-0 z-10 flex h-screen w-full items-center justify-center'>
           <h1
             ref={nameRef}
-            className='relative mt-10 flex gap-2 text-6xl font-bold text-black/65 text-foreground sm:text-[12rem]'
+            className={cn(
+              'relative mt-24 font-bold text-slate-900/70 flex',
+              'sm:text-[14rem] sm:tracking-normal text-[5.8rem] tracking-tighter sm:gap-2',
+            )}
           >
             <div
               className=''

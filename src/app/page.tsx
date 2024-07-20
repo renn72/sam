@@ -9,49 +9,15 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import Hero from '@/components/Hero'
+import Products from '@/components/Products'
 
 gsap.registerPlugin(useGSAP)
 gsap.registerPlugin(ScrollTrigger)
 
-const HeroTextIn = ({
-  children,
-  introOut,
-}: {
-  children: React.ReactNode
-  introOut: boolean
-}) => {
-  return (
-    <div
-      className={cn(s['hide-text'], introOut && s['show-text'], 'text-black')}
-    >
-      {children}
-    </div>
-  )
-}
-
 export default function Home() {
-  const [introOut, setIntroOut] = useState(false)
   const [whyRectRef, whyRect] = useRect()
 
   const container = useRef<HTMLDivElement>(null)
-
-  useGSAP(
-    () => {
-      ScrollTrigger.create({
-        trigger: container.current,
-        pin: '.pin-me',
-        start: 'center center',
-        end: '=+500',
-      })
-    },
-    { scope: container },
-  )
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIntroOut(true)
-    }, 1000)
-  }, [])
 
   return (
     <ReactLenis root>
@@ -64,7 +30,8 @@ export default function Home() {
             height={32}
           />
         </nav>
-        <Hero triggerRef={container} />
+        <Hero />
+        <Products />
 
         <section ref={container}>
           <div className='flex h-screen flex-col items-center justify-center bg-white'>
