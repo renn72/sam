@@ -3,11 +3,12 @@ import { useState, useEffect, useRef } from 'react'
 import { ReactLenis, useLenis } from 'lenis/react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import s from './home.module.scss'
+import s from '@/app/home.module.scss'
 import { useRect } from '@darkroom.engineering/hamo'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import Hero from '@/components/Hero'
 
 gsap.registerPlugin(useGSAP)
 gsap.registerPlugin(ScrollTrigger)
@@ -63,57 +64,8 @@ export default function Home() {
             height={32}
           />
         </nav>
-        <section
-          className={cn('relative flex h-screen items-center justify-center')}
-        >
-          <div className='hero-after-gradient h-full w-full'>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className='left-0 top-0 z-0 h-full w-full object-cover'
-            >
-              <source
-                src='/assets/top_hero.mp4'
-                type='video/mp4'
-              />
-            </video>
-            <h1
-              className={cn(
-                'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-6xl font-bold text-black text-foreground sm:text-9xl',
-                introOut && s.show,
-              )}
-            >
-              Sam Bate
-            </h1>
-          </div>
-          <div
-            className={cn(
-              'absolute bottom-12 left-0 flex w-full justify-center',
-            )}
-          >
-            <div
-              className={cn(
-                'hide-on-mobile',
-                s['scroll-hint'],
-                false && s.hide,
-                introOut && s.show,
-                'grid w-[90vw] grid-cols-3',
-              )}
-            >
-              <div className={cn(s.text, 'ml-4')}>
-                <HeroTextIn introOut={introOut}>
-                  <p>scroll</p>
-                </HeroTextIn>
-                <HeroTextIn introOut={introOut}>
-                  <p> to explore</p>
-                </HeroTextIn>
-              </div>
-            </div>
-            <div className={cn(s.text, '')}></div>
-          </div>
-        </section>
+        <Hero triggerRef={container} />
+
         <section ref={container}>
           <div className='flex h-screen flex-col items-center justify-center bg-white'>
             <Image
