@@ -15,30 +15,17 @@ const Products = () => {
   const image2Ref = useRef(null)
 
   useGSAP(() => {
-    ScrollTrigger.create({
-      trigger: image1Ref.current,
-      pin: true,
-      start: 'top top',
-      end: '100%',
-      scrub: true,
-    })
-    ScrollTrigger.create({
-      trigger: image2Ref.current,
-      pin: true,
-      start: 'top top',
-      end: '+=400',
-      scrub: true,
-    })
   })
   return (
     <section
       className='pb-80'
-      ref={container}>
-      <div className=' grid h-screen w-full grid-cols-2 bg-white'>
-        <div
-          ref={image1Ref}
-          className='flex h-screen flex-col items-center justify-center bg-white'
-        >
+      ref={container}
+    >
+      <div
+        ref={image1Ref}
+        className=' grid h-screen w-full grid-cols-2 bg-white'
+      >
+        <div className='flex h-screen flex-col items-center justify-center bg-white'>
           <Image
             src='/assets/beer_nuts.webp'
             alt=''
@@ -46,15 +33,24 @@ const Products = () => {
             height={400}
           />
         </div>
-        <div className='flex h-full w-full items-center justify-center bg-white'>
-          text
+        <div className='flex h-full w-full justify-center bg-white items-center'>
+          <p className='max-w-lg'>
+            Beer nuts are a popular snack known for their irresistible
+            combination of crunch and flavor, making them an ideal companion to
+            a cold beverage. The unique blend of seasoning often includes hints
+            of caramelized sugar and salt, striking a perfect balance that
+            appeals to a wide range of palates. Whether enjoyed at a casual
+            backyard barbecue or a lively pub, Australian beer nuts offer a
+            delightful snacking experience that complements the laid-back,
+            convivial spirit of Australian social gatherings
+          </p>
         </div>
       </div>
-      <div className=' grid h-screen w-full grid-cols-2 bg-white'>
-        <div
-          ref={image2Ref}
-          className='flex h-screen flex-col items-center justify-center bg-red-500'
-        >
+      <div
+        ref={image2Ref}
+        className=' grid h-screen w-full grid-cols-2 bg-white'
+      >
+        <div className='flex h-screen flex-col items-center justify-center bg-red-500'>
           <Image
             src='/assets/vodka.png'
             alt=''
