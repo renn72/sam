@@ -116,7 +116,7 @@ const Hero = () => {
             ref={nameRef}
             className={cn(
               'relative mt-24 font-bold text-slate-900/70 flex',
-              'sm:text-[14rem] sm:tracking-normal text-[5.8rem] tracking-tighter sm:gap-2',
+              'sm:text-[14rem] sm:tracking-normal text-[5.4rem] tracking-tighter sm:gap-2',
             )}
           >
             <div
