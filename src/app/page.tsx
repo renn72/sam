@@ -1,18 +1,9 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis } from 'lenis/react'
 import Image from 'next/image'
-import { cn } from '@/lib/utils'
-import s from '@/app/home.module.scss'
-import { useRect } from '@darkroom.engineering/hamo'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { useGSAP } from '@gsap/react'
 import Hero from '@/components/Hero'
 import Products from '@/components/Products'
-
-gsap.registerPlugin(useGSAP)
-gsap.registerPlugin(ScrollTrigger)
+import About from '@/components/About'
 
 export default function Home() {
   return (
@@ -28,7 +19,7 @@ export default function Home() {
         </nav>
         <Hero />
         <Products />
-
+        <About />
       </main>
     </ReactLenis>
   )
