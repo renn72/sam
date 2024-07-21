@@ -7,12 +7,7 @@ import s from '@/app/home.module.scss'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { TextPlugin } from 'gsap/dist/TextPlugin'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-
-gsap.registerPlugin(useGSAP)
-gsap.registerPlugin(TextPlugin)
-gsap.registerPlugin(ScrollTrigger)
 
 const HeroTextIn = ({
   children,

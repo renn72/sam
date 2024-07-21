@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import '@/styles/global.scss'
 
 import type { Metadata } from 'next'
+import RegisterGSAP from '@/components/RegisterGSAP'
 
 export const metadata: Metadata = {
   title: 'Sam Bate',
@@ -18,6 +19,7 @@ export default function RootLayout({
       lang='en'
       className=''
     >
+        <RegisterGSAP />
         <body >{children}</body>
     </html>
   )

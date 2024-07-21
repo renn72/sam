@@ -7,16 +7,13 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import styles from './product.module.scss'
 
-gsap.registerPlugin(useGSAP)
-gsap.registerPlugin(ScrollTrigger)
-
 const Products = () => {
   const container = useRef(null)
   const image1Ref = useRef(null)
   const image2Ref = useRef(null)
 
   useGSAP(() => {
-     const tl = gsap.timeline({
+    const tl = gsap.timeline({
       defaults: {
         ease: 'none',
       },
@@ -36,12 +33,21 @@ const Products = () => {
       stagger: 2,
     })
 
-    tl.to(image1Ref.current, {
-      y: window.innerHeight,
-      duration: 1,
-      stagger: 2,
-    }, '<')
+    tl.to(
+      image1Ref.current,
+      {
+        y: window.innerHeight,
+        duration: 1,
+        stagger: 2,
+      },
+      '<',
+    )
 
+    ScrollTrigger.addEventListener('refresh', function () {
+      if (document.body.getAttribute('style') === '') {
+        document.body.removeAttribute('style')
+      }
+    })
   })
 
   return (
@@ -51,7 +57,7 @@ const Products = () => {
     >
       <div
         ref={image1Ref}
-        className='grid w-full grid-cols-2 card-flip'
+        className='card-flip grid w-full grid-cols-2'
       >
         <div className='flex h-screen flex-col items-center justify-center'>
           <Image
@@ -76,7 +82,7 @@ const Products = () => {
       </div>
       <div
         ref={image2Ref}
-        className='grid h-screen w-full grid-cols-2 bg-white card-flip'
+        className='card-flip grid h-screen w-full grid-cols-2 bg-white'
       >
         <div className='flex h-screen flex-col items-center justify-center bg-red-500'>
           <Image
