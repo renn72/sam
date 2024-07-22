@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Hero from '@/components/Hero'
 import Products from '@/components/Products'
 import About from '@/components/About'
+import Footer from '@/components/Footer'
+import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
         <Hero />
         <Products />
         <About />
+        <Contact />
+        <Footer />
       </main>
     </ReactLenis>
   )

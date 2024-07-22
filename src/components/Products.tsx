@@ -5,50 +5,14 @@ import { cn } from '@/lib/utils'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import styles from './product.module.scss'
+import './product.module.scss'
 
 const Products = () => {
   const container = useRef(null)
   const image1Ref = useRef(null)
   const image2Ref = useRef(null)
 
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      defaults: {
-        ease: 'none',
-      },
-      scrollTrigger: {
-        trigger: container.current,
-        start: 'top top',
-        end: `${window.innerHeight * 1} top`,
-        scrub: true,
-        pin: true,
-        markers: true,
-      },
-    })
-
-    tl.from(image2Ref.current, {
-      clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
-      duration: 1,
-      stagger: 2,
-    })
-
-    tl.to(
-      image1Ref.current,
-      {
-        y: window.innerHeight,
-        duration: 1,
-        stagger: 2,
-      },
-      '<',
-    )
-
-    ScrollTrigger.addEventListener('refresh', function () {
-      if (document.body.getAttribute('style') === '') {
-        document.body.removeAttribute('style')
-      }
-    })
-  })
+  useGSAP(() => {})
 
   return (
     <section
@@ -65,10 +29,11 @@ const Products = () => {
             alt=''
             width={400}
             height={400}
+            className='rounded-full'
           />
         </div>
         <div className='flex h-full w-full items-center justify-center bg-white'>
-          <p className='max-w-lg'>
+          <p className='max-w-lg font-medium'>
             Beer nuts are a popular snack known for their irresistible
             combination of crunch and flavor, making them an ideal companion to
             a cold beverage. The unique blend of seasoning often includes hints
@@ -82,18 +47,29 @@ const Products = () => {
       </div>
       <div
         ref={image2Ref}
-        className='card-flip grid h-screen w-full grid-cols-2 bg-white'
+        className='card-flip grid h-screen w-full grid-cols-2'
       >
-        <div className='flex h-screen flex-col items-center justify-center bg-red-500'>
+        <div className='flex h-screen flex-col items-center justify-center'>
           <Image
             src='/assets/vodka.png'
             alt=''
             width={400}
             height={600}
+            className='rounded-full'
           />
         </div>
         <div className='flex h-full w-full items-center justify-center bg-white'>
-          text
+          <p className='max-w-lg font-medium'>
+            Cherries in Victoria, Australia, thrive in the region's ideal
+            climate, with cool winters and warm summers, particularly in the
+            Yarra Valley, Mornington Peninsula, and Goulburn Valley. Known for
+            their exceptional flavor, juiciness, and vibrant color, these
+            cherries are harvested from November to early January. Victorian
+            cherry growers are adopting sustainable practices like organic
+            farming and water-efficient irrigation to ensure environmental
+            health. As a result, Victoria's cherries are not only delicious but
+            also support sustainable agriculture.
+          </p>
         </div>
       </div>
     </section>
