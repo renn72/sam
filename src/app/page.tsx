@@ -6,6 +6,7 @@ import Products from '@/components/Products'
 import About from '@/components/About'
 import Footer from '@/components/Footer'
 import Contact from '@/components/Contact'
+import Benefits from '@/components/Benefits'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         </nav>
         <Hero />
         <Products />
+        <Benefits />
         <About />
         <Contact />
         <Footer />
