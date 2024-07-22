@@ -2,7 +2,7 @@
 import { ReactLenis } from 'lenis/react'
 import Image from 'next/image'
 import Hero from '@/components/Hero'
-import Products from '@/components/Products'
+import Products from '@/components/ProductsV0'
 import About from '@/components/About'
 import Footer from '@/components/Footer'
 import Contact from '@/components/Contact'
