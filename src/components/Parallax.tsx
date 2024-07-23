@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { HeroParallax } from '@/components/ui/hero-parallax'
+import { HeroParallax } from '@/components/ui/hero-parallax-2'
 
 const Parallax = () => {
   return <HeroParallax products={products} />

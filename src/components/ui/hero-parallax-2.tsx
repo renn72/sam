@@ -8,6 +8,7 @@ import {
   MotionValue,
 } from 'framer-motion'
 import Image from 'next/image'
+import { cn } from '@/lib/utils'
 
 export const HeroParallax = ({
   products,
@@ -49,13 +50,14 @@ export const HeroParallax = ({
     springConfig,
   )
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.6], [-700, 500]),
     springConfig,
   )
   return (
     <div
       ref={ref}
-      className='relative flex h-[300vh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]'
+      className={cn('relative flex h-[300vh] flex-col self-auto overflow-hidden',
+        'py-40 antialiased [perspective:600px] [transform-style:preserve-3d]')}
     >
       <Header />
       <motion.div
@@ -67,7 +69,7 @@ export const HeroParallax = ({
         }}
         className=''
       >
-        <motion.div className='mb-20 flex flex-row-reverse space-x-20 space-x-reverse'>
+        <motion.div className='mt-4 md:mt-0 mb-8 md:mb-20 flex flex-row-reverse space-x-2 md:space-x-20 space-x-reverse md:justify-center'>
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -76,7 +78,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className='mb-20 flex  flex-row space-x-20 '>
+        <motion.div className='mb-8 md:mb-20 flex  flex-row space-x-2 md:space-x-20  justify-center'>
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -85,7 +87,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className='flex flex-row-reverse space-x-20 space-x-reverse'>
+        <motion.div className='flex flex-row-reverse space-x-2 md:space-x-20 space-x-reverse justify-center'>
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -135,16 +137,16 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className='group/product relative h-96 w-[30rem] flex-shrink-0'
+      className='group/product relative h-56 w-56 md:h-96 md:w-[30rem] flex-shrink-0'
     >
       <Image
         src={product.thumbnail}
         height='600'
         width='600'
-        className='absolute inset-0 h-full w-full object-cover object-left-top'
+        className='absolute inset-0 h-full w-full object-cover object-left-top drop-shadow-xl'
         alt={product.title}
       />
-      <div className='pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-80'></div>
+      <div className='pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-60'></div>
       <h2 className='absolute bottom-4 left-4 text-white opacity-0 group-hover/product:opacity-100'>
         {product.title}
       </h2>
