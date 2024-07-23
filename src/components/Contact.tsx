@@ -14,7 +14,7 @@ const Contact = () => {
             </h2>
             <p className='max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
               Have a project in mind or just want to say hello? Fill out the
-              form below and we'll get back to you as soon as possible.
+              form below and I'll get back to you as soon as possible.
             </p>
           </div>
         </div>
@@ -49,20 +49,6 @@ const Contact = () => {
               </div>
               <Button type='submit'>Send Message</Button>
             </form>
-          </div>
-          <div className='space-y-4'>
-            <h3 className='text-xl font-bold'>Address</h3>
-            <div className='space-y-2'>
-              <p>123 Main St</p>
-              <p>Anytown, USA 12345</p>
-            </div>
-          </div>
-          <div className='space-y-4'>
-            <h3 className='text-xl font-bold'>Contact Info</h3>
-            <div className='space-y-2'>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: info@example.com</p>
-            </div>
           </div>
         </div>
       </div>
