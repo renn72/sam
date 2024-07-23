@@ -24,7 +24,6 @@ export default function Home() {
         </nav>
         <Hero />
         <Products />
-        <Benefits />
         <About />
         <Testimonial />
         <Contact />

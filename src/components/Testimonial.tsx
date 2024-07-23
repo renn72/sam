@@ -3,7 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 const Testimonial = () => {
   return (
-    <section className="bg-muted py-12 md:py-16 lg:py-20">
+    <section className="py-12 md:py-16 lg:py-20">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What Our Clients Say</h2>
