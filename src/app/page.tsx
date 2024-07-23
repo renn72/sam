@@ -27,7 +27,6 @@ export default function Home() {
         <Benefits />
         <About />
         <Testimonial />
-        <FAQ />
         <Contact />
         <Footer />
       </main>
