@@ -91,8 +91,12 @@ const Hero = () => {
   }, [])
   return (
     <section
-      className={cn('relative flex h-screen items-center justify-center')}
+      className={cn('relative flex h-[110vh] items-center justify-center')}
     >
+      <div className={cn('absolute left-0 bottom-0 z-10 h-[15vh] w-full',
+          'bg-gradient-to-b to-[rgb(204,204,204)] from-transparent'
+        )}>
+      </div>
       <div className='hero-after-gradient h-full w-full'>
         <video
           autoPlay
@@ -125,7 +129,7 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className={cn('absolute bottom-12 left-0 flex w-full justify-center')}
+        className={cn('absolute bottom-[15vh] left-0 flex w-full justify-center')}
       >
         <div
           className={cn(

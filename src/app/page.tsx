@@ -2,7 +2,6 @@
 import { ReactLenis } from 'lenis/react'
 import Image from 'next/image'
 import Hero from '@/components/Hero'
-import Products from '@/components/ProductsV0'
 import About from '@/components/About'
 import Footer from '@/components/Footer'
 import Contact from '@/components/Contact'
@@ -12,7 +11,7 @@ import Parallax from '@/components/Parallax'
 export default function Home() {
   return (
     <ReactLenis root>
-      <main className='relative bg-gradient-to-r from-[rgb(224,224,224)] via-[rgb(251,251,251)] to-[rgb(224,224,224)]'>
+      <main className='relative bg-[rgb(204,204,204)]'>
         <nav className='absolute left-4 top-2 z-10 flex items-center justify-center'>
           <Image
             src='/logo/android-chrome-512x512.png'
