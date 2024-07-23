@@ -4,11 +4,11 @@ const About = () => {
   return (
     <section className='top-gradient relative h-[120vh] w-full'>
       <div className={cn('absolute left-0 top-0 z-10 h-[10vh] w-full',
-          'bg-gradient-to-b from-[rgb(204,204,204)] to-transparent'
+          'bg-gradient-to-b from-background to-transparent'
         )}>
       </div>
       <div className={cn('absolute left-0 -bottom-1 z-10 h-[10vh] w-full',
-          'bg-gradient-to-b to-[rgb(204,204,204)] from-transparent'
+          'bg-gradient-to-b to-background from-transparent'
         )}>
       </div>
       <video
