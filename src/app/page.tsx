@@ -6,9 +6,8 @@ import Products from '@/components/ProductsV0'
 import About from '@/components/About'
 import Footer from '@/components/Footer'
 import Contact from '@/components/Contact'
-import Benefits from '@/components/Benefits'
-import FAQ from '@/components/FAQ'
 import Testimonial from '@/components/Testimonial'
+import Parallax from '@/components/Parallax'
 
 export default function Home() {
   return (
@@ -23,7 +22,7 @@ export default function Home() {
           />
         </nav>
         <Hero />
-        <Products />
+        <Parallax />
         <About />
         <Testimonial />
         <Contact />
