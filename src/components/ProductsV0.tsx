@@ -1,6 +1,6 @@
 const Products = () => {
   return (
-    <section className="grid grid-cols-1 gap-6 px-4 md:px-6 py-12 md:py-24">
+    <section className="grid grid-cols-1 gap-6 px-4 md:px-6 py-12 md:py-24 max-w-screen-xl mx-auto">
       <div className="bg-background rounded-lg shadow-lg overflow-hidden">
         <img src="/placeholder.jpg" alt="Flavored Nuts" width={500} height={400} className="w-full h-64 object-cover" />
         <div className="p-4">
