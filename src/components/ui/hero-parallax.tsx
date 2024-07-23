@@ -163,7 +163,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className='group/product relative h-56 w-40 flex-shrink-0 md:h-96 md:w-[30rem]'
+      className='group/product relative h-56 w-40 flex-shrink-0 md:h-96 md:w-[30rem] drop-shadow-lg hover:drop-shadow-2xl'
     >
       <Image
         src={product.thumbnail}
@@ -172,7 +172,7 @@ export const ProductCard = ({
         className='absolute  inset-0 h-full w-full object-cover'
         alt={product.title}
       />
-      <div className='pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-50'></div>
+      <div className='pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-40'></div>
       <h2 className='absolute bottom-4 left-4 text-white opacity-0 group-hover/product:opacity-100'>
         {product.title}
       </h2>
