@@ -14,10 +14,8 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
-
 @layer base {
   :root {
-
     --background: 57 10% 86%;
     --foreground: 20 14.3% 4.1%;
 
@@ -51,6 +49,7 @@ input[type='number'] {
     --radius: 0.5rem;
     --accent: var(--red);
 
+    --font-primary: 'Slussen';
   }
 
   .dark {

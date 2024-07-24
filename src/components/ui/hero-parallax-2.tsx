@@ -27,7 +27,7 @@ export const HeroParallax = ({
     offset: ['start start', 'end start'],
   })
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 50 }
+  const springConfig = { stiffness: 300, damping: 80, bounce: 1, mass: 1 }
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 800]),
