@@ -1,36 +1,73 @@
 'use client'
 import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 const Printing = () => {
   return (
     <section className='w-full py-12 md:py-24 lg:py-32'>
       <div className='container grid max-w-5xl items-center gap-8 px-4 md:px-6 lg:grid-cols-2'>
         <div className='grid gap-4'>
-          <div className='space-y-2'>
-            <div className='inline-block rounded-lg bg-muted px-3 py-1 text-sm'>
-              3D Printed Innovation
-            </div>
-            <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
+          <div className='space-y-4'>
+            <motion.div
+              initial={{ rotate: 0 }}
+              whileInView={{
+                rotate: [10, -10, 10, -10, 10, -10, 0],
+              }}
+              transition={{ duration: 0.5 }}
+              className='w-max'
+            >
+              <Badge
+                variant='secondary'
+                className='font-bold'
+              >
+                3D Printed Innovation
+              </Badge>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: [0, 1] }}
+              transition={{
+                easing: 'easeIn',
+                duration: 2.5,
+              }}
+              className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'
+            >
               Solving Food Development Challenges with 3D Printing
-            </h2>
+            </motion.h2>
           </div>
           <div className='grid gap-2'>
-            <h3 className='text-xl font-semibold'>
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 1.5 }}
+              className='text-xl font-semibold'
+            >
               Customized Attachment Streamlines Food Prep
-            </h3>
-            <p className='text-muted-foreground'>
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 1.5 }}
+              className='text-muted-foreground'
+            >
               During the development of a new food product, our in-house food
               scientist encountered a recurring issue with a specific
               preparation step. To address this, they designed and 3D printed a
               custom attachment that significantly improved the efficiency and
               consistency of the process.
-            </p>
-            <p className='text-muted-foreground'>
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 1.5 }}
+              className='text-muted-foreground'
+            >
               By leveraging the flexibility and rapid prototyping capabilities
               of 3D printing, they were able to iterate on the design until they
               found the perfect solution, saving time and resources in the
               product development cycle.
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className='grid gap-4'>
@@ -42,7 +79,10 @@ const Printing = () => {
             className='mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center'
           />
           <div className='flex justify-center gap-4'>
-            <Button variant='outline'>
+            <Button
+              variant='outline'
+              className='hover:bg-muted-foreground'
+            >
               <DownloadIcon className='mr-2 h-4 w-4' />
               Download STL
             </Button>
@@ -51,7 +91,10 @@ const Printing = () => {
               target='_blank'
               prefetch={false}
             >
-              <Button variant='outline'>
+              <Button
+                variant='outline'
+                className='hover:bg-muted-foreground'
+              >
                 <YoutubeIcon className='mr-2 h-4 w-4' />
                 Watch Video
               </Button>
