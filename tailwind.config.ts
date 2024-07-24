@@ -9,6 +9,9 @@ const config = {
     './src/**/*.{ts,tsx}',
 	],
   prefix: "",
+  fontFamily: {
+    sans: ['Slussen', 'Inter var', 'sans-serif'],
+  },
   theme: {
     container: {
       center: true,
