@@ -12,7 +12,7 @@ import Printing from '@/components/Printing'
 export default function Home() {
   return (
     <ReactLenis root>
-      <main className='relative bg-background font-sans'>
+      <main className='relative bg-background'>
         <nav className='absolute left-4 top-2 z-10 flex items-center justify-center'>
           <Image
             src='/logo/android-chrome-512x512.png'
