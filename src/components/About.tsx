@@ -2,15 +2,22 @@
 import { cn } from '@/lib/utils'
 const About = () => {
   return (
-    <section className='top-gradient relative h-[120vh] w-full'>
-      <div className={cn('absolute left-0 top-0 z-10 h-[10vh] w-full',
-          'bg-gradient-to-b from-background to-transparent'
-        )}>
-      </div>
-      <div className={cn('absolute left-0 -bottom-1 z-10 h-[10vh] w-full',
-          'bg-gradient-to-b to-background from-transparent'
-        )}>
-      </div>
+    <section
+      id='about'
+      className='top-gradient relative h-[120vh] w-full'
+    >
+      <div
+        className={cn(
+          'absolute left-0 top-0 z-10 h-[10vh] w-full',
+          'bg-gradient-to-b from-background to-transparent',
+        )}
+      ></div>
+      <div
+        className={cn(
+          'absolute -bottom-1 left-0 z-10 h-[10vh] w-full',
+          'bg-gradient-to-b from-transparent to-background',
+        )}
+      ></div>
       <video
         autoPlay
         muted

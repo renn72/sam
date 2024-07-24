@@ -5,7 +5,10 @@ import { Button } from '@/components/ui/button'
 
 const Contact = () => {
   return (
-    <section className='w-full py-12 md:py-24 lg:py-32'>
+    <section
+      id='contact'
+      className='w-full py-12 md:py-24 lg:py-32'
+    >
       <div className='container grid gap-12 px-4 md:px-6'>
         <div className='flex flex-col items-center justify-center space-y-4 text-center'>
           <div className='space-y-2'>
@@ -18,8 +21,8 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        <div className='grid grid-cols-1 gap-8 justify-items-center '>
-          <div className='space-y-4 max-w-[700px]'>
+        <div className='grid grid-cols-1 justify-items-center gap-8 '>
+          <div className='max-w-[700px] space-y-4'>
             <h3 className='text-xl font-bold'>Contact Us</h3>
             <form className='space-y-4'>
               <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>

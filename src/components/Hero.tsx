@@ -91,6 +91,7 @@ const Hero = () => {
   }, [])
   return (
     <section
+      id='home'
       className={cn('relative flex h-[110vh] items-center justify-center')}
     >
       <div className={cn('absolute left-0 bottom-0 z-10 h-[15vh] w-full',

@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import { useLenis } from 'lenis/react'
 
 const Footer = () => {
+  const lenis = useLenis()
   return (
     <footer className='py-8 text-foreground sm:py-12'>
       <div className='container flex max-w-5xl flex-col items-center justify-between gap-8 sm:flex-row'>
@@ -12,34 +14,24 @@ const Footer = () => {
           portfolio to see what I can create.
         </p>
         <nav className='flex gap-4 sm:gap-6'>
-          <Link
-            href='#'
+          <a
             className='text-sm underline-offset-4 hover:underline'
-            prefetch={false}
+            onClick={() => lenis?.scrollTo('#home')}
           >
             Home
-          </Link>
-          <Link
-            href='#'
+          </a>
+          <a
             className='text-sm underline-offset-4 hover:underline'
-            prefetch={false}
+            onClick={() => lenis?.scrollTo('#about')}
           >
             About
-          </Link>
-          <Link
-            href='#'
+          </a>
+          <a
             className='text-sm underline-offset-4 hover:underline'
-            prefetch={false}
-          >
-            Projects
-          </Link>
-          <Link
-            href='#'
-            className='text-sm underline-offset-4 hover:underline'
-            prefetch={false}
+            onClick={() => lenis?.scrollTo('#contact')}
           >
             Contact
-          </Link>
+          </a>
         </nav>
       </div>
     </footer>
