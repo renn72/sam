@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useLenis } from 'lenis/react'
 
 const Footer = () => {

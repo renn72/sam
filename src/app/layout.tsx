@@ -1,5 +1,4 @@
 import '@/styles/globals.css'
-import '@/styles/global.scss'
 
 import type { Metadata } from 'next'
 import RegisterGSAP from '@/components/RegisterGSAP'

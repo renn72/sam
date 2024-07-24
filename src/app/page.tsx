@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import Contact from '@/components/Contact'
 import Testimonial from '@/components/Testimonial'
 import Parallax from '@/components/Parallax'
+import Printing from '@/components/Printing'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <Parallax />
         <About />
+        <Printing />
         <Testimonial />
         <Contact />
         <Footer />

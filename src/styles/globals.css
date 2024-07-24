@@ -14,6 +14,61 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+@font-face {
+  font-family: 'Slussen';
+  src: url('/fonts/Slussen-Compressed-Black.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 900;
+  font-stretch: compressed;
+}
+
+@font-face {
+  font-family: 'Slussen';
+  src: url('/fonts/Slussen-Expanded-Black.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 900;
+  font-stretch: expanded;
+}
+
+@font-face {
+  font-family: 'Slussen';
+  src: url('/fonts/Slussen-Expanded-Black.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 1000;
+  font-stretch: expanded;
+}
+
+@font-face {
+  font-family: 'Slussen';
+  src: url('/fonts/Slussen-Medium.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Slussen';
+  src: url('/fonts/Slussen-Regular.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Slussen';
+  src: url('/fonts/Slussen-Semibold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Slussen';
+  src: url('/fonts/Slussen-Bold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 700;
+}
+
+:root {
+}
+
 @layer base {
   :root {
     --background: 57 10% 86%;
@@ -42,11 +97,14 @@ input[type='number'] {
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;
 
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
+    --border: 57 10% 50%;
+    --input: 57 10% 50%;
     --ring: 20 14.3% 4.1%;
 
     --radius: 0.5rem;
+    --accent: var(--red);
+
+    --font-primary: 'Slussen';
   }
 
   .dark {
@@ -80,7 +138,6 @@ input[type='number'] {
     --input: 12 6.5% 15.1%;
     --ring: 24 5.7% 82.9%;
     --red: #fe0222;
-    --accent: var(--red);
   }
 }
 
@@ -93,6 +150,16 @@ input[type='number'] {
   body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
+  }
+}
+
+html {
+  font-weight: bolder;
+  font-family: var(--font-primary);
+  scrollbar-width: thin;
+
+  &.nav {
+    overflow: hidden;
   }
 }
 

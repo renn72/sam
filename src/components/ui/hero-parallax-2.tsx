@@ -56,8 +56,10 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className={cn('relative flex h-[300vh] flex-col self-auto overflow-hidden',
-        'py-40 antialiased [perspective:600px] [transform-style:preserve-3d]')}
+      className={cn(
+        'relative flex h-[300vh] flex-col self-auto overflow-hidden',
+        'py-40 antialiased [perspective:600px] [transform-style:preserve-3d]',
+      )}
     >
       <Header />
       <motion.div
@@ -69,7 +71,7 @@ export const HeroParallax = ({
         }}
         className=''
       >
-        <motion.div className='mt-4 md:mt-0 mb-8 md:mb-20 flex flex-row-reverse space-x-2 md:gap-8 space-x-reverse md:justify-center'>
+        <motion.div className='mb-8 mt-4 flex flex-row-reverse space-x-2 space-x-reverse md:mb-20 md:mt-0 md:justify-center md:gap-8'>
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -78,7 +80,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className='mb-8 md:mb-20 flex  flex-row space-x-2 md:space-x-20  justify-center'>
+        <motion.div className='mb-8 flex flex-row  justify-center space-x-2 md:mb-20  md:space-x-20'>
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -87,7 +89,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className='flex flex-row-reverse space-x-2 md:gap-8 space-x-reverse justify-center'>
+        <motion.div className='flex flex-row-reverse justify-center space-x-2 space-x-reverse md:gap-8'>
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -104,16 +106,25 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className='relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40'>
-      <h1 className='text-2xl font-bold dark:text-white md:text-7xl'>
+      <motion.h1
+        whileInView={{ x: 100 }}
+        transition={{ duration: 1.5 }}
+        initial={{ x: 0 }}
+        className='text-2xl font-bold dark:text-white md:text-7xl'
+      >
         Makin <br /> some cool shit
-      </h1>
-      <p className='mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl'>
+      </motion.h1>
+      <motion.p
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        initial={{ opacity: 0 }}
+        className='mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl'>
         By blending science and creativity, I craft innovative dishes that push
         the boundaries of taste and texture. With a passion for experimentation
         and a flair for the unexpected, I'm constantly pioneering new culinary
         frontiers, delivering a feast for the senses that leaves a lasting
         impression.
-      </p>
+      </motion.p>
     </div>
   )
 }
@@ -137,7 +148,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className='group/product relative h-56 w-56 md:h-96 md:w-[30rem] flex-shrink-0'
+      className='group/product relative h-56 w-56 flex-shrink-0 md:h-96 md:w-[30rem]'
     >
       <Image
         src={product.thumbnail}
