@@ -17,6 +17,7 @@ input[type='number'] {
 
 @layer base {
   :root {
+
     --background: 57 10% 86%;
     --foreground: 20 14.3% 4.1%;
 
