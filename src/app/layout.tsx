@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className='font-slussen'
+      // className='font-slussen'
     >
         <RegisterGSAP />
         <body >{children}</body>
