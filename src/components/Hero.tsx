@@ -35,9 +35,9 @@ const Hero = () => {
     gsap.fromTo(
       samRef.current,
       {
-        x: '200%',
+        x: '75vw',
         opacity: 0.1,
-        duration: 1,
+        duration: 4,
         ease: 'power1.inOut',
       },
       {
@@ -57,9 +57,9 @@ const Hero = () => {
     gsap.fromTo(
       bateRef.current,
       {
-        x: '-200%',
+        x: '-75vw',
         opacity: 0.1,
-        duration: 1,
+        duration: 4,
         ease: 'power1.inOut',
       },
       {
