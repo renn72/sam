@@ -23,7 +23,7 @@ const Testimonial = () => {
               <CarouselItem>
                 <div className='flex flex-col items-center gap-6 md:flex-row md:gap-8'>
                   <Avatar className='h-20 w-20 border-2 border-primary'>
-                    <AvatarImage src='/placeholder-user.jpg' />
+                    <AvatarImage src='/assets/avatar-1.svg' />
                     <AvatarFallback>RC</AvatarFallback>
                   </Avatar>
                   <div className='text-center md:text-left'>
@@ -43,7 +43,7 @@ const Testimonial = () => {
               <CarouselItem>
                 <div className='flex flex-col items-center gap-6 md:flex-row md:gap-8'>
                   <Avatar className='h-20 w-20 border-2 border-primary'>
-                    <AvatarImage src='/placeholder-user.jpg' />
+                    <AvatarImage src='/assets/avatar-2.svg' />
                     <AvatarFallback>MA</AvatarFallback>
                   </Avatar>
                   <div className='text-center md:text-left'>
