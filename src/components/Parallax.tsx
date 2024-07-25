@@ -40,7 +40,7 @@ const products = [
     thumbnail: '/assets/media/cider.jpg',
   },
   {
-    title: 'Freeze Drying',
+    title: 'Freeze Dry',
     thumbnail: '/assets/media/rub.jpg',
   },
 ]

@@ -2,8 +2,39 @@ import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    console.log(name, email, message);
+
+    emailjs
+      .send('service_yoswyge', 'template_3osp2z9',
+        {
+          name: name,
+          email: email,
+          message: message,
+        }
+        , {
+        publicKey: 'DTZBWo1Ee1Pil1Ezv',
+      })
+      .then(
+        (r) => {
+          console.log('SUCCESS!', r.status, r.text);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <section
       id='contact'
@@ -24,13 +55,15 @@ const Contact = () => {
         <div className='grid grid-cols-1 justify-items-center gap-8 '>
           <div className='max-w-[700px] space-y-4'>
             <h3 className='text-xl font-bold'>Contact Us</h3>
-            <form className='space-y-4'>
+            <form className='space-y-4' onSubmit={sendEmail}>
               <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
                 <div className='space-y-2'>
                   <Label htmlFor='name'>Name</Label>
                   <Input
                     id='name'
                     placeholder='Enter your name'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className='space-y-2'>
@@ -39,6 +72,8 @@ const Contact = () => {
                     id='email'
                     type='email'
                     placeholder='Enter your email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </div>
@@ -48,6 +83,8 @@ const Contact = () => {
                   id='message'
                   placeholder='Enter your message'
                   rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
               <Button type='submit'>Send Message</Button>
