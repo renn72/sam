@@ -61,6 +61,7 @@ const Contact = () => {
                   <Label htmlFor='name'>Name</Label>
                   <Input
                     id='name'
+                    className=''
                     placeholder='Enter your name'
                     value={name}
                     onChange={(e) => setName(e.target.value)}

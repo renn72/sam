@@ -86,7 +86,7 @@ const Printing = () => {
           />
           <div className='flex justify-center gap-4'>
             <Button
-              variant='outline'
+              variant='secondary'
               className='hover:bg-muted-foreground'
               onClick={() => window.open('/assets/breville_cherry.3mf')}
             >
@@ -99,7 +99,7 @@ const Printing = () => {
               prefetch={false}
             >
               <Button
-                variant='outline'
+              variant='secondary'
                 className='hover:bg-muted-foreground'
               >
                 <YoutubeIcon className='mr-2 h-4 w-4' />
