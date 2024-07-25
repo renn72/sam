@@ -11,7 +11,7 @@ const config = {
   prefix: '',
   theme: {
     fontFamily: {
-      Slussen: ['Slussen', 'Inter var', 'sans-serif'],
+      slussen: ['Slussen', 'Inter var', 'sans-serif'],
     },
     container: {
       center: true,
