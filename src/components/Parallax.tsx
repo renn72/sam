@@ -13,35 +13,35 @@ const products = [
   },
   {
     title: 'Cherry',
-    thumbnail: '/assets/cherry.JPG',
+    thumbnail: '/assets/media/cherry.jpg',
   },
   {
     title: 'Cherry Vodka',
     thumbnail: '/assets/vodka.png',
   },
   {
-    title: 'Jerked Nuts',
-    thumbnail: '/assets/beer_nuts_jerk.webp',
+    title: '',
+    thumbnail: '/assets/media/plant.jpg',
   },
   {
     title: 'Mushrooms',
-    thumbnail: '/assets/freeze_dry_mushroom.jpg',
+    thumbnail: '/assets/media/tubes.jpg',
   },
   {
     title: 'Sausages',
-    thumbnail: '/assets/sausage.jpg',
-  },
-  {
-    title: 'Sexy Beast',
-    thumbnail: '/assets/mixer.jpg',
-  },
-  {
-    title: 'Cider',
-    thumbnail: '/assets/cider.jpg',
+    thumbnail: '/assets/media/tuna.jpg',
   },
   {
     title: 'Freeze Drying',
-    thumbnail: '/assets/blood_orange.jpg',
+    thumbnail: '/assets/media/freeze.jpg',
+  },
+  {
+    title: 'Cider',
+    thumbnail: '/assets/media/cider.jpg',
+  },
+  {
+    title: 'Freeze Drying',
+    thumbnail: '/assets/media/rub.jpg',
   },
 ]
 
