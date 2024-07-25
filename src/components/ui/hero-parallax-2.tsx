@@ -110,15 +110,14 @@ export const Header = () => {
         whileInView={{ x: 100 }}
         transition={{ duration: 1.5 }}
         initial={{ x: 0 }}
-        className='text-2xl font-bold dark:text-white md:text-7xl'
+        className='text-2xl font-bold dark:text-white md:text-7xl h-12'
       >
-        Makin <br /> some cool shit
       </motion.h1>
       <motion.p
-        whileInView={{ opacity: 1 }}
+        whileInView={{ x: 0 }}
         transition={{ duration: 1.5 }}
-        initial={{ opacity: 0 }}
-        className='mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl'>
+        initial={{ x: -100 }}
+        className='mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl z-10'>
         By blending science and creativity, I craft innovative dishes that push
         the boundaries of taste and texture. With a passion for experimentation
         and a flair for the unexpected, I'm constantly pioneering new culinary

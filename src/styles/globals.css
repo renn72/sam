@@ -42,8 +42,8 @@ input[type='number'] {
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;
 
-    --border: 57 10% 50%;
-    --input: 57 10% 50%;
+    --border: 57 10% 10%;
+    --input: 57 10% 10%;
     --ring: 20 14.3% 4.1%;
 
     --radius: 0.5rem;
@@ -91,6 +91,7 @@ input[type='number'] {
   }
   * {
     @apply border-border;
+    font-family: var(--font-primary);
   }
   body {
     @apply bg-background text-foreground;

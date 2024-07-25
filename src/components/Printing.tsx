@@ -33,7 +33,7 @@ const Printing = () => {
               }}
               className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'
             >
-              Solving Food Development Challenges with 3D Printing
+              Sustainability Victoria
             </motion.h2>
           </div>
           <div className='grid gap-2'>
@@ -42,20 +42,26 @@ const Printing = () => {
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 1.5 }}
               className='text-xl font-semibold'
-            >
-              Customized Attachment Streamlines Food Prep
-            </motion.h3>
+            ></motion.h3>
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 1.5 }}
               className='text-muted-foreground'
             >
-              During the development of a new food product, our in-house food
-              scientist encountered a recurring issue with a specific
-              preparation step. To address this, they designed and 3D printed a
-              custom attachment that significantly improved the efficiency and
-              consistency of the process.
+              In 2022, Sustainability Victoria accepted my grant proposal to
+              innovate processes and products for
+              <a
+                href='https://www.cebic.vic.gov.au/projects/funded-project-transforming-cherry-waste-into-commercially-viable-high-value-products'
+                target='_blank'
+                rel='noreferrer'
+                className='underline mx-2 text-lg'
+              >
+                500 tonnes of Victorian cherries
+              </a>
+              that are wasted each year. I’ve developed and launched cherry
+              products ranging from cider, vodka, wholesale juice, freeze dried
+              fruit and the list continues to grow.
             </motion.p>
             <motion.p
               initial={{ opacity: 0 }}
@@ -63,16 +69,16 @@ const Printing = () => {
               transition={{ duration: 1.5 }}
               className='text-muted-foreground'
             >
-              By leveraging the flexibility and rapid prototyping capabilities
-              of 3D printing, they were able to iterate on the design until they
-              found the perfect solution, saving time and resources in the
-              product development cycle.
+              As well as commercial uses I’ve added this novel method of using
+              juice grade cherries. By using a common household juicer and this
+              3D printed part, anyone can produce high quality cherry juice
+              quickly.
             </motion.p>
           </div>
         </div>
         <div className='grid gap-4'>
           <img
-            src='/assets/cad.jpg'
+            src='/assets/breville.png'
             width={800}
             height={600}
             alt='3D Printed Attachment'
@@ -82,12 +88,13 @@ const Printing = () => {
             <Button
               variant='outline'
               className='hover:bg-muted-foreground'
+              onClick={() => window.open('/assets/breville_cherry.3mf')}
             >
               <DownloadIcon className='mr-2 h-4 w-4' />
-              Download STL
+              Download 3mf
             </Button>
             <Link
-              href='#'
+              href='https://youtu.be/s6Q5RhvQXMA'
               target='_blank'
               prefetch={false}
             >
