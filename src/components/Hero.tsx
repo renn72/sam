@@ -36,15 +36,13 @@ const Hero = () => {
       samRef.current,
       {
         x: '75vw',
-        opacity: 0.1,
-        duration: 4,
         ease: 'power1.inOut',
       },
       {
         x: '0',
-        duration: 1,
+        duration: 1.5,
         opacity: 1,
-        ease: 'power1.outIn',
+        ease: 'power1.inOut',
         onComplete: () => {
           gsap.to(samRef.current, {
             y: '-10%',
@@ -58,15 +56,13 @@ const Hero = () => {
       bateRef.current,
       {
         x: '-75vw',
-        opacity: 0.1,
-        duration: 4,
         ease: 'power1.inOut',
       },
       {
         x: '0',
         opacity: 1,
-        duration: 1,
-        ease: 'power1.outIn',
+        duration: 1.5,
+        ease: 'power1.inOut',
         onComplete: () => {
           gsap.to(bateRef.current, {
             y: '10%',
@@ -94,10 +90,12 @@ const Hero = () => {
       id='home'
       className={cn('relative flex h-[110vh] items-center justify-center')}
     >
-      <div className={cn('absolute left-0 bottom-0 z-10 h-[15vh] w-full',
-          'bg-gradient-to-b to-background from-transparent'
-        )}>
-      </div>
+      <div
+        className={cn(
+          'absolute bottom-0 left-0 z-10 h-[15vh] w-full',
+          'bg-gradient-to-b from-transparent to-background',
+        )}
+      ></div>
       <div className='hero-after-gradient h-full w-full'>
         <video
           autoPlay
@@ -115,22 +113,29 @@ const Hero = () => {
           <h1
             ref={nameRef}
             className={cn(
-              'relative mt-24 font-bold text-slate-900/70 flex',
-              'sm:text-[14rem] sm:tracking-normal text-[5.4rem] tracking-tighter sm:gap-2',
+              'relative mt-24 flex font-bold text-slate-900/70',
+              'text-[5.4rem] tracking-tighter sm:gap-2 sm:text-[14rem] sm:tracking-normal',
             )}
           >
             <div
-              className=''
+              className='opacity-0'
               ref={samRef}
             >
               Sam
             </div>
-            <div ref={bateRef}>Bate</div>
+            <div
+              className='opacity-0'
+              ref={bateRef}
+            >
+              Bate
+            </div>
           </h1>
         </div>
       </div>
       <div
-        className={cn('absolute bottom-[15vh] left-0 flex w-full justify-center')}
+        className={cn(
+          'absolute bottom-[15vh] left-0 flex w-full justify-center',
+        )}
       >
         <div
           className={cn(
