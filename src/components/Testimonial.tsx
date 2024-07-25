@@ -24,11 +24,11 @@ const Testimonial = () => {
                 <div className='flex flex-col items-center gap-6 md:flex-row md:gap-8'>
                   <Avatar className='h-20 w-20 border-2 border-primary'>
                     <AvatarImage src='/placeholder-user.jpg' />
-                    <AvatarFallback>R</AvatarFallback>
+                    <AvatarFallback>RC</AvatarFallback>
                   </Avatar>
                   <div className='text-center md:text-left'>
-                    <h3 className='text-xl font-semibold'>Rob</h3>
-                    <p className='text-muted-foreground'>Bonfire Station</p>
+                    <h3 className='text-xl font-semibold'>Rob Christopher</h3>
+                    <p className='text-muted-foreground'>Director of Mundroola Farms</p>
                     <blockquote className='mt-4 text-lg font-medium leading-relaxed'>
                       Sam was the perfect product developer for our expanding
                       cherry farm. His industry expertise and extensive network
