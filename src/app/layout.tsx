@@ -1,5 +1,5 @@
-import '@/styles/global.scss'
 import '@/styles/globals.css'
+import '@/styles/global.scss'
 
 import type { Metadata } from 'next'
 import RegisterGSAP from '@/components/RegisterGSAP'
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className=''
+      className='Slussen'
     >
         <RegisterGSAP />
         <body >{children}</body>
