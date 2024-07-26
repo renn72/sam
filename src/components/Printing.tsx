@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 const Printing = () => {
   return (
-    <section className='w-full h-screen flex flex-col justify-center py-12 md:py-24 lg:py-32'>
+    <section className='w-full min-h-screen flex flex-col justify-center py-24 md:py-24 lg:py-32'>
       <div className='container grid max-w-5xl items-center gap-8 px-4 md:px-6 lg:grid-cols-2'>
         <div className='grid gap-4'>
           <div className='space-y-4'>
