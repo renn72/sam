@@ -153,7 +153,7 @@ export default function Home() {
                   className={styles.primaryAction}
                   href='#work'
                 >
-                  Explore the work
+                  View work
                 </a>
                 <a
                   className={styles.secondaryAction}
@@ -161,7 +161,7 @@ export default function Home() {
                   rel='noreferrer'
                   target='_blank'
                 >
-                  Start a conversation
+                  LinkedIn
                 </a>
               </div>
             </div>
@@ -279,7 +279,7 @@ export default function Home() {
               className={styles.primaryAction}
               href='/assets/breville_cherry.3mf'
             >
-              Download the 3MF
+              Download 3MF
             </a>
             <a
               className={styles.secondaryAction}
@@ -287,7 +287,7 @@ export default function Home() {
               rel='noreferrer'
               target='_blank'
             >
-              Watch the project video
+              Watch video
             </a>
           </div>
         </div>
@@ -340,7 +340,7 @@ export default function Home() {
               rel='noreferrer'
               target='_blank'
             >
-              Connect on LinkedIn
+              LinkedIn message
             </a>
             <a
               className={styles.secondaryAction}
