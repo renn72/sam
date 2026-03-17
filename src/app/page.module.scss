@@ -21,16 +21,15 @@
 }
 
 .topbar {
-  position: relative;
-  z-index: 30;
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.875rem 1rem;
-  border-bottom: 1px solid var(--line);
-  background: rgba(245, 240, 231, 0.9);
-  backdrop-filter: blur(18px);
+  pointer-events: none;
 }
 
 .brand {
@@ -44,6 +43,7 @@
   backdrop-filter: blur(18px);
   color: #f6f0e7;
   text-decoration: none;
+  pointer-events: auto;
 }
 
 .brandMark {
@@ -84,6 +84,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+  pointer-events: auto;
 }
 
 .menuButton {
@@ -94,10 +95,11 @@
   width: 3rem;
   height: 3rem;
   padding: 0.75rem;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(245, 241, 234, 0.28);
   border-radius: 999px;
-  background: rgba(29, 36, 30, 0.05);
-  color: var(--ink);
+  background: rgba(19, 28, 25, 0.62);
+  backdrop-filter: blur(18px);
+  color: #f6f0e7;
 }
 
 .menuButton span {
@@ -110,7 +112,7 @@
 
 .menuButton:hover,
 .menuButton:focus-visible {
-  background: rgba(29, 36, 30, 0.1);
+  background: rgba(19, 28, 25, 0.78);
   outline: none;
 }
 
@@ -148,7 +150,7 @@
 
 .hero {
   position: relative;
-  min-height: calc(100svh - 4.75rem);
+  min-height: 100svh;
   overflow: clip;
   color: #f5efe5;
 }
@@ -207,8 +209,8 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 1.5rem;
-  min-height: calc(100svh - 4.75rem);
-  padding: 1.5rem 1.25rem 2rem;
+  min-height: 100svh;
+  padding: 6rem 1.25rem 2rem;
 }
 
 .eyebrow,
