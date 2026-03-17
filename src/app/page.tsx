@@ -1,6 +1,14 @@
 import Image from 'next/image'
+import MobileNav from '@/components/MobileNav'
 
 import styles from './page.module.scss'
+
+const navItems = [
+  { href: '#approach', label: 'Approach' },
+  { href: '#work', label: 'Work' },
+  { href: '#project', label: 'Cherry project' },
+  { href: '#contact', label: 'Contact' },
+] as const
 
 const principles = [
   {
@@ -96,14 +104,19 @@ export default function Home() {
             <small>Food development and product innovation</small>
           </span>
         </a>
+        <MobileNav items={navItems} />
         <nav
           aria-label='Primary'
           className={styles.nav}
         >
-          <a href='#approach'>Approach</a>
-          <a href='#work'>Work</a>
-          <a href='#project'>Cherry project</a>
-          <a href='#contact'>Contact</a>
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              key={item.href}
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
       </header>
 
@@ -129,7 +142,7 @@ export default function Home() {
         <div className={styles.heroOrb} />
         <div className={styles.heroInner}>
           <p className={styles.eyebrow}>
-            Natural products. Honest flavour. Waste-to-value development.
+            Food development, NPD, waste to value.
           </p>
           <div className={styles.heroGrid}>
             <div>
@@ -140,8 +153,8 @@ export default function Home() {
             </div>
             <div className={styles.heroCopy}>
               <p className={styles.heroLead}>
-                Food and beverage development that feels grounded in the
-                ingredient, not dressed up like a generic brand exercise.
+                Natural food and beverage development with real product
+                character.
               </p>
               <p className={styles.heroBody}>
                 Sam works with primary producers and processors to create
