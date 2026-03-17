@@ -4,11 +4,11 @@ import '@/styles/global.scss'
 import localFont from 'next/font/local'
 
 import type { Metadata } from 'next'
-import RegisterGSAP from '@/components/RegisterGSAP'
 
 export const metadata: Metadata = {
-  title: 'Sam Bate',
-  description: '',
+  title: 'Sam Bate | Food Development and Product Innovation',
+  description:
+    'Sam Bate develops food and beverage products with a natural, commercially sharp approach spanning innovation, waste-to-value development, and launch-ready concepts.',
 }
 
 const myFont = localFont({
@@ -25,7 +25,6 @@ export default function RootLayout({
       lang='en'
       className={myFont.className}
     >
-      <RegisterGSAP />
       <body>{children}</body>
     </html>
   )
